@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  overflow-x: hidden;
+  background-color: #f1f2f3;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('https://images.unsplash.com/photo-1557853197-aefb550b6fdc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80');
+  background-size: cover;
+}
+
+button {
+  border: none;
+}
+
+.wrapper {
+  max-width: 800px;
+  width: 100%;
+}
+
+.player {
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  position: relative;
+  overflow: hidden;
+}
+
+.player__video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.btn {
+  border-radius: 4px;
+  padding: 4px;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.btn svg {
+  fill: #fff;
+  width: 32px;
+  height: 32px;
+}
+
+.btn {
+  background: #c4302b;
+}
+
+.player__play-big {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  background: rgba(196, 48, 43, 0.25);
+  border-radius: 50%;
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+
+.player__play-big svg {
+  width: 128px;
+  height: 128px;
+}
+
+.player__toolbar {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  padding: 5px 10px;
+  background: rgba(136, 136, 136, 0.25);
+  bottom: 0;
+  height: 55px;
+  gap: 10px;
+  border-radius: 4px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease;
+}
+
+.player__progress-bar {
+  position: absolute;
+  width: calc(100% - 20px);
+  background: #fff;
+  height: 5px;
+  bottom: 57px;
+  border-radius: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+}
+
+.player__progress-bar-line {
+  width: 0;
+  height: 5px;
+  background: #c4302b;
+  pointer-events: none;
+}
+
+.player svg {
+  pointer-events: none;
+}
+
+.player__play-small {
+}
+
+.player__volume {
+}
+
+.player__progress-time {
+  margin-right: auto;
+  font-size: 24px;
+  color: #fff;
+  display: flex;
+}
+
+.player__progress-time-current {
+}
+
+.player__progress-time-all {
+}
+
+.player__progress-time-label {
+  margin-right: 15px;
+  position: relative;
+}
+
+.player__progress-time-value {
+  position: absolute;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: -5px;
+  left: 25%;
+  transform: translateX(-25%);
+}
+
+.player__progress-time-volume {
+  width: 100px;
+}
+
+input[type='range'] {
+  -webkit-appearance: none;
+}
+
+input[type='range']::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 6px;
+  cursor: pointer;
+  background: #c4302b;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+input[type='range']::-webkit-slider-thumb {
+  height: 14px;
+  width: 14px;
+  border-radius: 3px;
+  background: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -5px;
+}
+
+input[type='range']:focus::-webkit-slider-runnable-track {
+  background: #ff0000;
+}
+
+.player__fullscreen {
+}
+
+.player__settings {
+  transition: all 0.5s ease;
+  position: relative;
+}
+
+.player__settings-speed {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: -201px;
+  left: -30px;
+  background: #c4302b;
+  width: 100px;
+  height: 200px;
+  overflow: auto;
+  color: #fff;
+  border-radius: 4px;
+
+  display: none;
+}
+
+.player__settings-speed div {
+  border-bottom: 2px solid grey;
+  margin-bottom: 4px;
+}
+
+.player__settings-speed div:last-child {
+  border-bottom: 2px solid transparent;
+}
+
+.player__settings-label {
+  cursor: pointer;
+  font-size: 16px;
+  display: block;
+  padding: 5px;
+}
+
+.player__settings-input {
+  display: none;
+}
+
+.player__settings-input:checked + .player__settings-label {
+  color: rgb(0, 0, 0);
+}
+
+.player__settings-speed::-webkit-scrollbar {
+  width: 12px;
+}
+
+.player__settings-speed::-webkit-scrollbar-track {
+  background: red;
+}
+
+.player__settings-speed::-webkit-scrollbar-thumb {
+  background-color: #fff;
+  border-radius: 20px;
+  border: 3px solid orange;
+}
+
+.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+@keyframes wheelRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+@media (hover: hover) {
+  .btn:hover {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    background: #d71e18;
+  }
+  .btn:active {
+    background-color: #ff0000;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  }
+
+  .player:hover .player__toolbar {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .player__settings:hover svg {
+    animation: wheelRotate 1s ease forwards;
+  }
+
+  .player__settings-label:hover {
+    opacity: 0.5;
+  }
+
+  .player__settings:hover .player__settings-speed {
+    display: flex;
+  }
+}
