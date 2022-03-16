@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  overflow-x: hidden;
+  background: #85bb65;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+button {
+  border: none;
+}
+
+.container {
+  background: #fff;
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 48px;
+}
+
+.icons {
+  display: flex;
+  flex-direction: column;
+}
+
+.icons span:nth-child(1) {
+  position: relative;
+  bottom: -40px;
+  color: green;
+}
+
+.icons span:nth-child(2) {
+  color: black;
+}
+
+.material-icons {
+  font-size: 128px;
+  color: #fff;
+}
+
+.text {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.calculator {
+  max-width: 400px;
+  width: 100%;
+}
+
+.calculator select {
+  height: 40px;
+  padding: 4px;
+}
+
+.calculator-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.calculator-middle {
+  display: flex;
+  justify-content: space-between;
+  margin: 40px 0;
+}
+
+.calculator-middle button {
+  font-size: 20px;
+  color: #fff;
+  border: none;
+  background: green;
+  padding: 4px 12px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  transition: all 0.5s ease;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.calculator-rate {
+  font-size: 21px;
+}
+
+.calculator-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.incrementer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.input {
+  max-width: 100px;
+  font-size: 27px;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  padding: 4px;
+  border-bottom: 2px solid grey;
+}
+
+.btns {
+  display: flex;
+  flex-direction: column;
+  margin-left: 23px;
+}
+
+.incrementer button {
+  background: green;
+  padding: 4px;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  margin-bottom: 10px;
+}
+
+.calculator-bottom input {
+  max-width: 155px;
+}
+
+.incrementer .material-icons {
+  color: #fff;
+  font-size: 24px;
+  pointer-events: none;
+}
+
+@media (hover: hover) {
+  .calculator-middle button:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    opacity: 0.8;
+  }
+
+  .calculator-middle button:active {
+    transform: scale(0.9);
+    opacity: 0.6;
+  }
+
+  .incrementer button:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    opacity: 0.8;
+  }
+
+  .incrementer button:active {
+    transform: scale(0.9);
+    opacity: 0.6;
+  }
+
+  .input:focus {
+    outline: transparent;
+  }
+}
