@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Poppins:ital,wght@0,400;0,700;1,300&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+  font-weight: 400;
+  font-size: 1.6rem;
+  background-color: #f1f2f3;
+}
+
+.title {
+  text-align: center;
+  font-size: 48px;
+  font-family: 'Bungee', cursive;
+  margin-bottom: 20px;
+}
+
+.container span.material-icons-outlined {
+  font-family: 'Material Icons', sans-serif;
+  font-size: 24px;
+  color: rgb(0, 0, 0);
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1230px;
+  width: 100%;
+  padding: 0 15px;
+
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.toolbar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+}
+
+.toolbar:before {
+  content: '';
+  position: absolute;
+  right: -20px;
+  width: 5px;
+  height: 100%;
+  background: rgb(73, 73, 73);
+  border-radius: 4px;
+}
+
+.toolbar__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 4px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  transition: all 0.5s ease;
+  cursor: pointer;
+  padding: 10px 15px;
+  background: #fff;
+  border: 3px solid rgb(1, 184, 1);
+}
+
+.toolbar__btn span {
+  margin-left: 5px;
+}
+
+.main {
+  width: 100%;
+  max-width: 500px;
+}
+
+.main__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.main__top:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background: rgb(73, 73, 73);
+  bottom: -20px;
+  border-radius: 4px;
+}
+
+.main__person {
+  font-size: 2.4rem;
+}
+
+.main__wealth {
+  font-weight: 300;
+  font-size: 24px;
+}
+
+.main__bottom {
+}
+
+.main__user {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.main__user-name {
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.main__user-cash {
+  font-weight: 300;
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.main__bottom-total {
+  margin-top: 40px;
+  font-size: 24px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.main__bottom-total:before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  width: 100%;
+  height: 5px;
+  background: rgb(73, 73, 73);
+  border-radius: 4px;
+
+}
+
+@media (hover: hover) {
+  .toolbar__btn:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    background: #000000;
+    color: #fff;
+  }
+
+  .toolbar__btn:hover span {
+    color: #fff;
+  }
+
+  .toolbar__btn:active {
+    transform: translate(-2px, -2px) scale(.95);
+  }
+
+}
