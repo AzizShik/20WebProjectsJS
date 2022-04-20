@@ -6,3 +6,4 @@ Custom Video Player https://azizshik.github.io/20WebProjectsJS/CustomVideoPlayer
 ExchangeRateCalculator https://azizshik.github.io/20WebProjectsJS/ExchangeRateCalculator/ <br>
 DOMArrayMethods https://azizshik.github.io/20WebProjectsJS/DOMArrayMethods/ <br>
 Menu&Modal https://azizshik.github.io/20WebProjectsJS/Menu&Modal/ <br>
+Hangman https://azizshik.github.io/20WebProjectsJS/Hangman/ <br>
