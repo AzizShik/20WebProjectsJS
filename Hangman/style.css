@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  overflow-x: hidden;
+  background: #1b1b1b;
+  color: #fff;
+  position: relative;
+  min-height: 100vh;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 36px;
+  text-align: center;
+  padding-top: 30px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.descr {
+  font-size: 24px;
+  text-align: center;
+}
+
+.game-container {
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 150px;
+  position: relative;
+}
+
+.figure-container {
+  fill: transparent;
+  stroke: #fff;
+  stroke-width: 4px;
+  stroke-linecap: round;
+}
+
+.figure-part {
+  display: none;
+}
+
+.wrong-letters-container {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 24px;
+  text-align: right;
+}
+
+.wrong-letters-title {
+  color: #ff3131;
+  letter-spacing: 3px;
+  font-size: 18px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.wrong-letters__inner {
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+  min-height: 45px;
+}
+
+.wrong-letters__span{
+  color: #ff3131;
+  width: 40px;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-bottom: 2px solid #ff3131;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.word {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  min-height: 50px;
+}
+
+.letters {
+  display: inline-block;
+  font-size: 32px;
+  border-bottom: 2px solid grey;
+  width: 50px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.popup-container {
+  opacity: 0;
+  visibility: hidden;
+  transition: all .5s ease;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup {
+  background: #f1f2f3;
+  color: #333;
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.popup__title {
+  font-size: 32px;
+  text-align: center;
+}
+
+.popup__word {
+  font-size: 32px;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.popup__word-span {
+  display: inline-block;
+  font-size: 32px;
+  text-transform: uppercase;
+  margin-left: 10px;
+  font-weight: 300;
+}
+
+.popup__btn {
+  display: block;
+  margin: 0 auto;
+  margin-top: 30px;
+  background: purple;
+  transition: all 0.3s ease;
+  color: #fff;
+  padding: 15px 30px;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 16px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.notification-container {
+  opacity: 0;
+  visibility: hidden;
+  transition: all .5s ease;
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  padding: 15px 30px;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  font-weight: 700;
+}
+
+.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media (hover: hover) {
+  .popup__btn:hover {
+    background: rgb(189, 0, 189);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  }
+
+  .popup__btn:active {
+    background: rgb(243, 0, 243);
+    box-shadow: unset 0 3px 6px rgba(0, 0, 0, 0.16),
+      unset 0 3px 6px rgba(0, 0, 0, 0.23);
+  }
+}
