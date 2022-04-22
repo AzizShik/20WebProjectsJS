@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Meal Finder</title>
+</head>
+
+<body>
+
+  <div class="container">
+    <header class="search">
+      <h1 class="title">Meal Finder</h1>
+      <form class="form">
+        <div class="form__block">
+          <input class="form__input" type="text" placeholder="Search for meals or keywords">
+          <button class="form__btn btn">
+            <span class="material-icons-outlined">
+              search
+            </span>
+          </button>
+        </div>
+        <button class="btn form__random">
+          <span class="material-icons-outlined">
+            shuffle
+          </span>
+        </button>
+      </form>
+    </header>
+  </div>
+
+  <main class="main">
+    <section class="meals">
+      <div class="container">
+        <div class="meals__result"></div>
+        <div class="meals__inner"></div>
+        <div class="meals__full"></div>
+      </div>
+    </section>
+  </main>
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>
