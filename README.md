@@ -7,3 +7,4 @@ ExchangeRateCalculator https://azizshik.github.io/20WebProjectsJS/ExchangeRateCa
 DOMArrayMethods https://azizshik.github.io/20WebProjectsJS/DOMArrayMethods/ <br>
 Menu&Modal https://azizshik.github.io/20WebProjectsJS/Menu&Modal/ <br>
 Hangman https://azizshik.github.io/20WebProjectsJS/Hangman/ <br>
+Meal Finder https://azizshik.github.io/20WebProjectsJS/MealFinder/ <br>
