@@ -3,6 +3,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -10,4 +11,211 @@ body {
   font-size: 18px;
   font-weight: 400;
   overflow-x: hidden;
+  padding-bottom: 30px;
+}
+
+.title {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.tracker {
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.balance {
+}
+
+.tracker__title {
+  font-size: 24px;
+  position: relative;
+}
+
+.tracker__title:before {
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: grey;
+  position: absolute;
+  bottom: 0;
+}
+
+.balance__numb {
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  background: rgb(36, 18, 18);
+  padding: 15px;
+  color: #fff;
+}
+
+.balance__block {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+.balance__block-item {
+  width: 50%;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  padding: 15px 30px;
+  font-size: 24px;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+}
+
+.balance__block-item-title {
+  font-size: 36px;
+  font-weight: 300;
+}
+
+.balance__block-income {
+  color: green;
+}
+
+.balance__block-span {
+  font-weight: 700;
+}
+
+.balance__block-income-span {
+  color: green;
+}
+
+.balance__block-expense {
+  color: red;
+}
+
+.balance__block-expense-span {
+}
+
+.history {
+}
+
+.history__cards {
+  background: #505050;
+  padding: 5px;
+  border-radius: 4px;
+  min-height: 70px;
+}
+
+.history__card {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  background: #f1f2f3;
+  margin-bottom: 5px;
+  padding: 15px;
+  position: relative;
+  border-radius: 4px;
+  min-height: 70px;
+}
+
+.history__card:last-child {
+  margin-bottom: 0;
+}
+
+.history__card-income {
+  color: green;
+}
+
+.history__card-title {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.history__card-numb {
+  background: rgb(0, 0, 0);
+  padding: 5px 10px;
+  border-radius: 10px;
+  display: inline-block;
+  font-weight: 700;
+}
+
+.history__card-expense {
+  color: red;
+}
+
+.history__card-delete {
+  font-weight: 700;
+  font-size: 24px;
+  color: #fff;
+  position: absolute;
+  width: 30px;
+  left: -30px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  transition: all 0.5s ease;
+  opacity: 0;
+}
+
+.add {
+  margin-top: 40px;
+}
+
+.add__block {
+  margin-bottom: 20px;
+}
+
+.add__block-label {
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 20px;
+}
+
+.add__block-input {
+  padding: 6px 12px;
+  border-radius: 4px;
+  background: #fff;
+  font-size: 20px;
+  margin-top: 10px;
+  width: 100%;
+  transition: all 0.5s ease;
+  outline: 1px solid grey;
+}
+
+.add__block-label-span {
+}
+
+.add__btn {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  border-radius: 10px;
+  background: purple;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+  border: none;
+  transition: all 0.5s ease;
+}
+
+.add__block-input:hover,
+.add__block-input:focus {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.add__btn:hover {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  cursor: pointer;
+  background: rgb(78, 0, 78);
+}
+
+.history__card:hover .history__card-delete {
+  opacity: 1;
+  cursor: pointer;
 }

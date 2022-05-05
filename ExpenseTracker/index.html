@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,9 +8,58 @@
   <link rel="stylesheet" href="style.css">
   <title>Expense Tracker</title>
 </head>
+
 <body>
-  
+  <h1 class="title">Expense Tracker</h1>
+
+  <section class="tracker">
+    <div class="balance">
+      <h2 class="tracker__title">Your Balance</h2>
+      <div class="balance__numb">$200.00</div>
+      <div class="balance__block">
+        <div class="balance__block-item balance__block-income">
+          <span class="balance__block-item-title">Income</span>
+          <span class="balance__block-span balance__block-income-span">$300.00</span>
+        </div>
+        <div class="balance__block-item balance__block-expense">
+          <span class="balance__block-item-title">Expense</span>
+          <span class="balance__block-span balance__block-expense-span">$100.00</span>
+        </div>
+      </div>
+    </div>
+    <div class="history">
+      <h2 class="tracker__title">History</h2>
+      <div class="history__cards">
+        <div class="history__card history__card-income">
+          <span class="history__card-delete">X</span>
+          <span class="history__card-title">Cash</span>
+          <span class="history__card-numb">+$300.00</span>
+        </div>
+        <div class="history__card history__card-expense">
+          <span class="history__card-delete">X</span>
+          <span class="history__card-title">Camera</span>
+          <span class="history__card-numb">-$100.00</span>
+        </div>
+      </div>
+    </div>
+    <div class="add">
+      <h2 class="tracker__title">Add new transaction</h2>
+      <div class="add__block">
+        <label aria-label="Input text" for="text" class="add__block-label">Text</label>
+        <input placeholder="Enter text..." type="text" class="add__block-input" id="text">
+      </div>
+      <div class="add__block">
+        <label aria-label="Input text" for="amount" class="add__block-label">
+          Amount
+          <span class="add__block-label-span">(negative - expense, positive - income)</span>
+        </label>
+        <input placeholder="Enter amount..." type="number" class="add__block-input" id="amount">
+      </div>
+      <button class="add__btn">Add transaction</button>
+    </div>
+  </section>
 
   <script src="script.js"></script>
 </body>
+
 </html>
