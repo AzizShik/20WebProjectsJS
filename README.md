@@ -9,3 +9,4 @@ Menu&Modal https://azizshik.github.io/20WebProjectsJS/Menu&Modal/ <br>
 Hangman https://azizshik.github.io/20WebProjectsJS/Hangman/ <br>
 Meal Finder https://azizshik.github.io/20WebProjectsJS/MealFinder/ <br>
 Expense Tracker https://azizshik.github.io/20WebProjectsJS/ExpenseTracker/ <br>
+Music Player https://azizshik.github.io/20WebProjectsJS/MusicPlayer/ <br>
