@@ -8,5 +8,4 @@ DOMArrayMethods https://azizshik.github.io/20WebProjectsJS/DOMArrayMethods/ <br>
 Menu&Modal https://azizshik.github.io/20WebProjectsJS/Menu&Modal/ <br>
 Hangman https://azizshik.github.io/20WebProjectsJS/Hangman/ <br>
 Meal Finder https://azizshik.github.io/20WebProjectsJS/MealFinder/ <br>
-    incomeCount();
 Expense Tracker https://azizshik.github.io/20WebProjectsJS/ExpenseTracker/ <br>
