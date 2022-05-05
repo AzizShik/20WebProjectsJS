@@ -6,6 +6,7 @@ window.addEventListener('load', () => {
   const playBtnIcon = playBtn.querySelector('span');
   const playerProgressWidth = document.querySelector('.player__progress-width');
   const playerProgressEl = document.querySelector('.player__progress');
+  const playerTitle = document.querySelector('.player__name-title');
   const playerImg = document.querySelector('.player__img');
 
   let isPlay = false;
@@ -14,14 +15,17 @@ window.addEventListener('load', () => {
     {
       poster: 'img/clockwork.jpg',
       src: 'audio/Clockwork.mp3',
+      name: 'Cushy Clock Work',
     },
     {
       poster: 'img/fire.jpg',
       src: 'audio/Fire.mp3',
+      name: 'Cushy Fire Drill',
     },
     {
       poster: 'img/focusing.jfif',
       src: 'audio/focusing.mp3',
+      name: 'Cushy Focusing',
     },
   ];
 
@@ -42,10 +46,12 @@ window.addEventListener('load', () => {
       playerAudio.play();
       playBtnIcon.innerHTML = 'pause';
       isPlay = true;
+      playerImg.classList.add('player__img--anim');
     } else {
       playerAudio.pause();
       playBtnIcon.innerHTML = 'play_arrow';
       isPlay = false;
+      playerImg.classList.remove('player__img--anim');
     }
   }
 
@@ -85,6 +91,7 @@ window.addEventListener('load', () => {
   function musicLoad(idx) {
     playerImg.src = music[idx].poster;
     playerAudio.src = music[idx].src;
+    playerTitle.textContent = music[idx].name;
     isPlay = false;
     audioToggle();
   }

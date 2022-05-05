@@ -46,6 +46,13 @@ button {
   width: 100%;
 }
 
+.player__name-title {
+  font-weight: 700;
+  font-size: 20px;
+  margin-top: 10px;
+  text-align: center;
+}
+
 .player__img {
   width: 128px;
   height: 128px;
@@ -53,16 +60,14 @@ button {
   object-fit: cover;
 }
 
-.player__audio {
-}
-
 .player__controls {
   position: relative;
-  align-self: flex-end;
   display: flex;
+  align-self: flex-end;
   justify-content: space-around;
   width: 100%;
   margin-left: 30px;
+  margin-bottom: 50px;
 }
 
 .player__progress {
@@ -72,7 +77,7 @@ button {
   top: -30px;
   position: absolute;
   background: #333;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   cursor: pointer;
 }
 
@@ -82,13 +87,13 @@ button {
   height: 12px;
   border-radius: 12px;
   background: #fff;
-  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
 .player__btn {
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   border-radius: 10px;
-  transition: all .5s ease;
+  transition: all 0.5s ease;
   padding: 5px;
 }
 
@@ -96,21 +101,29 @@ button {
   font-size: 36px;
 }
 
-.player__prev {
-}
-
-.player__next {
-}
-
-.player__play {
-}
-
 .player__btn:hover {
-  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   background: #333;
   cursor: pointer;
 }
 
 .player__btn:hover span {
   color: #fff;
+}
+
+.player__img--anim {
+  animation: playerAnim 5s linear infinite;
+}
+@keyframes playerAnim {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
