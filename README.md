@@ -14,3 +14,4 @@ Infinite Scoll https://azizshik.github.io/20WebProjectsJS/InfiniteScroll/ <br>
 Typing Game https://azizshik.github.io/20WebProjectsJS/TypingGame/ <br>
 Speech Text Reader https://azizshik.github.io/20WebProjectsJS/SpeechTextReader/ <br>
 Memory Cards https://azizshik.github.io/20WebProjectsJS/MemoryCards/ <br>
+Lyrics https://azizshik.github.io/20WebProjectsJS/Lyrics/ <br>
