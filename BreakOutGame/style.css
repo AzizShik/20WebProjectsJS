@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  overflow-x: hidden;
+  background: #005dd0;
+  color: #fff;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  border: none;
+  outline: none;
+}
+
+.title {
+  font-size: 36px;
+}
+.show-btn {
+  position: absolute;
+  left: 25px;
+  top: 25px;
+}
+.btn {
+  background: #333;
+  padding: 12px 20px;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.rules {
+  position: absolute;
+  width: 400px;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: #111;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transform: translateX(-100%);
+  transition: all .5s ease;
+}
+
+.rules__title {
+  margin-bottom: 15px;
+  font-size: 30px;
+}
+.rules__descr {
+  margin-bottom: 30px;
+  font-size: 20px;
+  line-height: 1.5;
+}
+.rules__close {
+  align-self: flex-end;
+}
+
+.canvas {
+  margin-top: 20px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+@media (hover: hover) {
+  .btn:hover {
+    background: #444;
+  }
+  .btn:active {
+    background: #555;
+    transform: scale(0.9);
+  }
+}
+
+
+.rules.show {
+  transform: translateX(0%);
+}
