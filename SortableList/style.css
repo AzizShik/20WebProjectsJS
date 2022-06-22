@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  overflow-x: hidden;
+
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+}
+
+ul {
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.list__item {
+  display: flex;
+  align-items: center;
+  background: rgb(70, 70, 70);
+  padding: 10px;
+  padding-left: 0;
+  color: #fff;
+  border-radius: 10px;
+  min-height: 60px;
+  border: 2px solid transparent;
+}
+
+.number {
+  align-self: stretch;
+  margin-right: auto;
+  font-weight: 300;
+  font-size: 20px;
+  font-weight: 700;
+  background: #000;
+  margin-top: -10px;
+  margin-bottom: -10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  pointer-events: none;
+  border-radius: 10px;
+}
+
+.person-name {
+  font-size: 24px;
+}
+
+.draggable {
+  border-radius: 10px;
+  width: 100%;
+  text-align: right;
+}
+
+.list__item.over {
+  background: rgb(0, 0, 0);
+  border: 2px solid grey;
+  border-left: transparent;
+}
+
+.list__item.over .number {
+  border-right: 2px solid #fff;
+}
+
+.list__item.wrong {
+  background: red;
+}
+.list__item.right {
+  background: green;
+}
+
+.check-btn {
+  padding: 10px;
+  font-size: 20px;
+  background: #fff;
+  border: 2px solid #000;
+  border-radius: 4px;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+@media (hover: hover) {
+  .check-btn:hover {
+    border: 2px solid rgb(0, 62, 104);
+    background: rgb(53, 53, 53);
+    color: #fff;
+  }
+
+  .check-btn:active {
+    transform: translate(2px, 2px) scale(0.95);
+  }
+}
