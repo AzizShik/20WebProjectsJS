@@ -19,3 +19,4 @@ RelaxerApp https://azizshik.github.io/20WebProjectsJS/RelaxerApp/ <br>
 BreakOutGame https://azizshik.github.io/20WebProjectsJS/BreakOutGame/ <br>
 NewYearCountdown https://azizshik.github.io/20WebProjectsJS/NewYearCountdown/ <br>
 SortableList https://azizshik.github.io/20WebProjectsJS/SortableList/ <br>
+SortableList https://azizshik.github.io/20WebProjectsJS/SpeakNumberGuess/ <br>
